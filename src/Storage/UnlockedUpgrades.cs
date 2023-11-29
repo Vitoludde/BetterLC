@@ -11,5 +11,11 @@ namespace BetterLC.src.Storage
 	{
 		public static UnlockedUpgrades Instance;
 		public bool BackpackUpgrade = false;
+
+		void Awake()
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 	}
 }
